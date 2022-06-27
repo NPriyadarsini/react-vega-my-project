@@ -2,7 +2,7 @@ import React from 'react';
 import BarChart from './BarChart';
 import PieChart from './PieChart';
 import DonutChart from './DonutChart';
-
+import LineChart from './LineChart';
 import './App.scss';
 
 const chartData = {
@@ -20,6 +20,7 @@ const App = () =>
 		<BarChart data={ chartData }/>,
 		<PieChart data={ chartData }/>,
 		<DonutChart data={ chartData }/>,
+		<LineChart data={ chartData }/>,
 	</div>;
 
 export default App;
