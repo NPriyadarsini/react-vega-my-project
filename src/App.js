@@ -1,5 +1,7 @@
 import React from 'react';
 import BarChart from './BarChart';
+import PieChart from './PieChart';
+
 import './App.scss';
 
 const chartData = {
@@ -15,6 +17,7 @@ const chartData = {
 const App = () =>
 	<div className="App" role="App">
 		<BarChart data={ chartData }/>,
+		<PieChart data={ chartData }/>,
 	</div>;
 
 export default App;
