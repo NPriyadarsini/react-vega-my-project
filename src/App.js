@@ -1,6 +1,7 @@
 import React from 'react';
 import BarChart from './BarChart';
 import PieChart from './PieChart';
+import DonutChart from './DonutChart';
 
 import './App.scss';
 
@@ -18,6 +19,7 @@ const App = () =>
 	<div className="App" role="App">
 		<BarChart data={ chartData }/>,
 		<PieChart data={ chartData }/>,
+		<DonutChart data={ chartData }/>,
 	</div>;
 
 export default App;
