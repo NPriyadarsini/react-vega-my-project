@@ -2,7 +2,7 @@ import React from 'react';
 import BarChart from './BarChart';
 import './App.scss';
 
-const barData = {
+const chartData = {
 	values: [
 		{ year: '2016', number: 1.2 },
 		{ year: '2017', number: 1.9 },
@@ -14,7 +14,7 @@ const barData = {
 };
 const App = () =>
 	<div className="App" role="App">
-		<BarChart data={ barData }/>,
+		<BarChart data={ chartData }/>,
 	</div>;
 
 export default App;
