@@ -4,6 +4,8 @@ import PieChart from './PieChart';
 import DonutChart from './DonutChart';
 import LineChart from './LineChart';
 import './App.scss';
+import GroupChart from './components/GroupChart';
+import ChartManager from './service/chartManager';
 
 const chartData = {
 	values: [
@@ -15,12 +17,19 @@ const chartData = {
 		{ year: '2021', number: 11.3 },
 	],
 };
-const App = () =>
-	<div className="App" role="App">
-		<BarChart data={ chartData }/>,
-		<PieChart data={ chartData }/>,
-		<DonutChart data={ chartData }/>,
-		<LineChart data={ chartData }/>,
-	</div>;
+const App = (context) => {
+	const { getProductsGroupChart } = ChartManager;
+
+	return (
+		<div className="App" role="App">
+			<BarChart data={ chartData }/>
+			<PieChart data={ chartData }/>
+			<DonutChart data={ chartData }/>
+			<LineChart data={ chartData }/>
+			<GroupChart { ...{ ...context,
+				data: getProductsGroupChart(context) } }
+			/>
+		</div>);
+};
 
 export default App;
