@@ -1,8 +1,8 @@
 import React from 'react';
-import BarChart from './BarChart';
-import PieChart from './PieChart';
-import DonutChart from './DonutChart';
-import LineChart from './LineChart';
+import BarChart from './components/BarChart';
+import PieChart from './components/PieChart';
+import DonutChart from './components/DonutChart';
+import LineChart from './components/LineChart';
 import './App.scss';
 import GroupChart from './components/GroupChart';
 import ChartManager from './service/chartManager';
