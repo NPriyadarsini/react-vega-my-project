@@ -1,7 +1,7 @@
 import { createClassFromLiteSpec } from 'react-vega-lite';
 
-export default createClassFromLiteSpec('BarChart', {
-	description: 'A simple Line chart with embedded data.',
+export default createClassFromLiteSpec('LineChart', {
+	description: 'A simple Line chart.',
 	data: {
 		// eslint-disable-next-line max-len
 		url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/stocks.csv',

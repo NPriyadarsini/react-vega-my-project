@@ -1,6 +1,6 @@
 import { createClassFromLiteSpec } from 'react-vega-lite';
 
-export default createClassFromLiteSpec('PieChart', {
+export default createClassFromLiteSpec('DonutChart', {
 	description: 'A simple Donut Chart',
 	width: 400,
 	height: 400,
