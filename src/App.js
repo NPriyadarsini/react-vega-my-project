@@ -25,7 +25,7 @@ const App = (context) => {
 			<BarChart data={ chartData }/>
 			<PieChart data={ chartData }/>
 			<DonutChart data={ chartData }/>
-			<LineChart data={ chartData }/>
+			<LineChart/>
 			<GroupChart { ...{ ...context,
 				data: getProductsGroupChart(context) } }
 			/>

@@ -1,16 +1,17 @@
 import { createClassFromLiteSpec } from 'react-vega-lite';
 
 export default createClassFromLiteSpec('BarChart', {
-	description: 'A simple bar chart with embedded data.',
+	description: 'A simple Line chart with embedded data.',
+	data: {
+		// eslint-disable-next-line max-len
+		url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/stocks.csv',
+	},
+	transform: [{ filter: 'datum.symbol===\'MSFT\'' }],
 	width: 400,
-	height: 100,
+	height: 200,
 	mark: 'line',
 	encoding: {
-		x: { timeUnit: 'year',
-			field: 'year',
-			type: 'temporal' },
-		y: { field: 'number',
-			type: 'quantitative',
-			title: 'Number of Vehicles in Millions' },
+		x: { field: 'date', type: 'temporal' },
+		y: { field: 'price', type: 'quantitative' },
 	},
 });
