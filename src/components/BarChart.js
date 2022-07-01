@@ -6,7 +6,7 @@ const BarChart = ({ data }) => {
 		description: 'A simple bar chart with embedded data.',
 		width: 400,
 		height: 400,
-		mark: { type: 'bar' },
+		mark: { type: 'bar', tooltip: true },
 		encoding: {
 			x: { field: 'year', type: 'ordinal' },
 			y: { field: 'number', type: 'quantitative',
