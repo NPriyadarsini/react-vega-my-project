@@ -1,7 +1,7 @@
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const LineChart = ({ data }) => {
+const LineChart = () => {
 	const spec = {
 		description: 'A simple Line chart.',
 		data: {
@@ -18,7 +18,7 @@ const LineChart = ({ data }) => {
 		},
 	};
 
-	return <VegaLite { ...{ spec, data } }/>;
+	return <VegaLite { ...{ spec } }/>;
 };
 
 export default LineChart;

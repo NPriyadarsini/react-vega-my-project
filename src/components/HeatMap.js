@@ -1,48 +1,47 @@
-import { createClassFromLiteSpec } from 'react-vega-lite';
+/* eslint-disable max-lines-per-function */
+import React from 'react';
+import { VegaLite } from 'react-vega';
 
-export default createClassFromLiteSpec('HeatMap', {
-	description: 'A Heat Map .',
-	data: {
+const HeatMap = () => {
+	const spec = {
+		description: 'A Heat Map .',
+		data: {
 		// eslint-disable-next-line max-len
-		url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/seattle-weather.csv',
-	},
-	width: 400,
-	height: 400,
-	title: 'Daily Max Temperatures (C) in Seattle, WA',
-	config: {
-		view: {
-			strokeWidth: 0,
-			step: 13,
+			url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/seattle-weather.csv',
 		},
-		axis: {
-			domain: false,
-		},
-	},
-	mark: 'rect',
-	encoding: {
-		x: {
-			field: 'date',
-			timeUnit: 'date',
-			type: 'ordinal',
-			title: 'Day',
+		width: 400,
+		height: 400,
+		title: 'Daily Max Temperatures (C) in Seattle, WA',
+		config: {
+			view: {
+				strokeWidth: 0,	step: 13,
+			},
 			axis: {
-				labelAngle: 0,
-				format: '%e',
+				domain: false,
 			},
 		},
-		y: {
-			field: 'date',
-			timeUnit: 'month',
-			type: 'ordinal',
-			title: 'Month',
-		},
-		color: {
-			field: 'temp_max',
-			aggregate: 'max',
-			type: 'quantitative',
-			legend: {
-				title: null,
+		mark: 'rect',
+		encoding: {
+			x: {
+				field: 'date', timeUnit: 'date', type: 'ordinal', title: 'Day',
+				axis: {
+					labelAngle: 0, format: '%e',
+				},
+			},
+			y: {
+				// eslint-disable-next-line max-len
+				field: 'date', timeUnit: 'month',	type: 'ordinal', title: 'Month',
+			},
+			color: {
+				field: 'temp_max', aggregate: 'max', type: 'quantitative',
+				legend: {
+					title: null,
+				},
 			},
 		},
-	},
-});
+	};
+
+	return <VegaLite { ...{ spec } }/>;
+};
+
+export default HeatMap;
