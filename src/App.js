@@ -24,13 +24,14 @@ const App = (context) => {
 	return (
 		<div className="App" role="App">
 			<BarChart data={ chartData }/>
+			<GroupChart
+				{ ...{ ...context,
+					data: getProductsGroupChart(context) } }
+			/>
 			<PieChart data={ chartData }/>
 			<DonutChart data={ chartData }/>
 			<LineChart/>
 			<HeatMap/>
-			<GroupChart { ...{ ...context,
-				data: getProductsGroupChart(context) } }
-			/>
 		</div>);
 };
 
