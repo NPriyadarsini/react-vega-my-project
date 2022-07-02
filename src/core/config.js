@@ -5,6 +5,12 @@ const config = {
 		height: 400,
 	},
 
+	heatMapProps: {
+		type: 'rect',
+		width: 400,
+		height: 400,
+	},
+
 	products: [
 		{
 			product: 'Orange',

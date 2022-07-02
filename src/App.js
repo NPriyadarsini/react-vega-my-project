@@ -6,6 +6,7 @@ import LineChart from './LineChart';
 import './App.scss';
 import GroupChart from './components/GroupChart';
 import ChartManager from './service/chartManager';
+import HeatMap from './components/HeatMap';
 
 const chartData = {
 	values: [
@@ -29,6 +30,7 @@ const App = (context) => {
 			<GroupChart { ...{ ...context,
 				data: getProductsGroupChart(context) } }
 			/>
+			<HeatMap { ...context }/>
 		</div>);
 };
 
