@@ -7,6 +7,7 @@ import HeatMap from './components/HeatMap';
 import './App.scss';
 import GroupChart from './components/GroupChart';
 import ChartManager from './service/chartManager';
+import HistogramScatterPlot from './components/HistogramScatterPlot';
 
 const chartData = {
 	values: [
@@ -32,6 +33,7 @@ const App = (context) => {
 			<DonutChart data={ chartData }/>
 			<LineChart/>
 			<HeatMap/>
+			<HistogramScatterPlot/>
 		</div>);
 };
 
