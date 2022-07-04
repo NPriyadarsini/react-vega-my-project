@@ -3,11 +3,12 @@ import BarChart from './components/BarChart';
 import PieChart from './components/PieChart';
 import DonutChart from './components/DonutChart';
 import LineChart from './components/LineChart';
-import HeatMap from './components/HeatMap';
 import './App.scss';
 import GroupChart from './components/GroupChart';
 import ChartManager from './service/chartManager';
 import HistogramScatterPlot from './components/HistogramScatterPlot';
+import HeatMapWeather from './components/HeatMapWeather';
+import HeatMap from './components/HeatMap';
 
 const chartData = {
 	values: [
@@ -32,8 +33,10 @@ const App = (context) => {
 			<PieChart data={ chartData }/>
 			<DonutChart data={ chartData }/>
 			<LineChart/>
-			<HeatMap/>
+			<HeatMapWeather/>
 			<HistogramScatterPlot/>
+			<LineChart data={ chartData }/>
+			<HeatMap { ...context }/>
 		</div>);
 };
 
