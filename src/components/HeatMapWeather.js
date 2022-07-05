@@ -2,15 +2,15 @@
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const HeatMap = () => {
+const HeatMapWeather = ({ config: { chartProps: { width, autosize }}}) => {
 	const spec = {
 		description: 'A Heat Map .',
 		data: {
 		// eslint-disable-next-line max-len
 			url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/seattle-weather.csv',
 		},
-		width: 400,
-		height: 400,
+		width: width,
+		autosize: autosize,
 		title: 'Daily Max Temperatures (C) in Seattle, WA',
 		config: {
 			view: {
@@ -44,4 +44,4 @@ const HeatMap = () => {
 	return <VegaLite { ...{ spec } }/>;
 };
 
-export default HeatMap;
+export default HeatMapWeather;

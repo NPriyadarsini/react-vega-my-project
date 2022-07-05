@@ -1,13 +1,16 @@
+/* eslint-disable max-lines-per-function */
+/* eslint-disable max-len */
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const HistogramScatterPlot = () => {
+const HistogramScatterPlot = ({ config: { chartProps: { width, autosize }}}) => {
 	const spec = {
 		description: '2D Histogram ScatterPlot.',
 		data: {
-			// eslint-disable-next-line max-len
 			url: 'https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json',
 		},
+		width: width,
+		autosize: autosize,
 		mark: 'circle',
 		encoding: {
 			x: {

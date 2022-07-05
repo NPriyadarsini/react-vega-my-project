@@ -6,7 +6,7 @@ const DonutChart = ({ config: { chartProps: { width, autosize }}, data }) => {
 		description: 'A simple Donut Chart',
 		width: width,
 		autosize: autosize,
-		mark: { type: 'arc', innerRadius: 90 },
+		mark: { type: 'arc', innerRadius: 40 },
 		title: 'No of Vehicles WorldWide(Millions)',
 		encoding: {
 			color: { timeUnit: 'year',
