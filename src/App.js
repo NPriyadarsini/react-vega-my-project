@@ -30,12 +30,11 @@ const App = (context) => {
 				{ ...{ ...context,
 					data: getProductsGroupChart(context) } }
 			/>
-			<PieChart data={ chartData }/>
-			<DonutChart data={ chartData }/>
-			<LineChart/>
+			<PieChart { ...context } data={ chartData }/>
+			<DonutChart { ...context } data={ chartData }/>
+			<LineChart { ...context }/>
 			<HeatMapWeather/>
 			<HistogramScatterPlot/>
-			<LineChart data={ chartData }/>
 			<HeatMap { ...context }/>
 		</div>);
 };

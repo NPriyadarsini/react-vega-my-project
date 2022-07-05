@@ -1,11 +1,11 @@
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const DonutChart = ({ data }) => {
+const DonutChart = ({ config: { chartProps: { width, autosize }}, data }) => {
 	const spec = {
 		description: 'A simple Donut Chart',
-		width: 400,
-		height: 400,
+		width: width,
+		autosize: autosize,
 		mark: { type: 'arc', innerRadius: 90 },
 		title: 'No of Vehicles WorldWide(Millions)',
 		encoding: {

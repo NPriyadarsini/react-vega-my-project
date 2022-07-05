@@ -1,11 +1,11 @@
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const PieChart = ({ data }) => {
+const PieChart = ({ config: { chartProps: { width, autosize }}, data }) => {
 	const spec = {
 		description: 'A simple Pie chart',
-		width: 400,
-		height: 400,
+		width: width,
+		autosize: autosize,
 		mark: { type: 'arc', tooltip: true },
 		title: 'No of Vehicles WorldWide(Millions)',
 		encoding: {
