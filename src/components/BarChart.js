@@ -1,11 +1,11 @@
 import React from 'react';
 import { VegaLite } from 'react-vega';
 
-const BarChart = ({ data }) => {
+const BarChart = ({ config: { chartProps: { width, autosize }}, data }) => {
 	const spec = {
 		description: 'A simple bar chart with embedded data.',
-		width: 400,
-		height: 400,
+		width: width,
+		autosize: autosize,
 		mark: { type: 'bar', tooltip: true },
 		encoding: {
 			x: { field: 'year', type: 'ordinal' },

@@ -25,7 +25,7 @@ const App = (context) => {
 
 	return (
 		<div className="App" role="App">
-			<BarChart data={ chartData }/>
+			<BarChart { ...context } data={ chartData }/>
 			<GroupChart
 				{ ...{ ...context,
 					data: getProductsGroupChart(context) } }

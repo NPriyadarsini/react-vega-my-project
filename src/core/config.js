@@ -10,7 +10,6 @@ const config = {
 		width: 400,
 		height: 400,
 	},
-
 	products: [
 		{
 			product: 'Orange',
@@ -31,6 +30,13 @@ const config = {
 			weekThree: 45,
 		},
 	],
+	chartProps: {
+		width: 300,
+		autosize: {
+			type: 'fit',
+			contains: 'padding',
+		},
+	},
 };
 
 export default config;
