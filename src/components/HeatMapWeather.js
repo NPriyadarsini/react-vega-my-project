@@ -14,12 +14,18 @@ const HeatMapWeather = ({ config: { chartProps: { width, autosize }}}) => {
 		title: 'Daily Max Temperatures (C) in Seattle, WA',
 		config: {
 			view: {
-				strokeWidth: 0,	step: 13,
+				strokeWidth: 0, step: 13,
 			},
 			axis: {
-				domain: false,
+				domain: false, grid: true, tickBand: 'extent',
 			},
 		},
+		params: [
+			{
+				name: 'brush',
+				select: 'interval',
+			},
+		],
 		mark: 'rect',
 		encoding: {
 			x: {
@@ -29,14 +35,18 @@ const HeatMapWeather = ({ config: { chartProps: { width, autosize }}}) => {
 				},
 			},
 			y: {
-				// eslint-disable-next-line max-len
-				field: 'date', timeUnit: 'month',	type: 'ordinal', title: 'Month',
+				field: 'date', timeUnit: 'month', type: 'ordinal',
+				title: 'Month',
 			},
 			color: {
-				field: 'temp_max', aggregate: 'max', type: 'quantitative',
-				legend: {
-					title: null,
+				aggregate: 'max',
+				legend: { title: null },
+				condition: {
+					param: 'brush',
+					field: 'temp_max',
+					type: 'quantitative',
 				},
+				value: 'grey',
 			},
 		},
 	};
