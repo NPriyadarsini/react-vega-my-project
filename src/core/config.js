@@ -10,6 +10,7 @@ const config = {
 		width: 400,
 		height: 400,
 	},
+
 	products: [
 		{
 			product: 'Orange',
@@ -30,6 +31,7 @@ const config = {
 			weekThree: 45,
 		},
 	],
+
 	chartProps: {
 		width: 300,
 		autosize: {
@@ -37,6 +39,12 @@ const config = {
 			contains: 'padding',
 		},
 	},
+
+	text: [
+		{ xField: 30, yField: 28, label: 'Andy' },
+		{ xField: 25, yField: 65, label: 'Brian' },
+		{ xField: 70, yField: 43, label: 'Charlie' },
+	],
 };
 
 export default config;

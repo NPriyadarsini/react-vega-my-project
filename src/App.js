@@ -9,6 +9,7 @@ import ChartManager from './service/chartManager';
 import HistogramScatterPlot from './components/HistogramScatterPlot';
 import HeatMapWeather from './components/HeatMapWeather';
 import HeatMap from './components/HeatMap';
+import TextChart from './components/TextChart';
 
 const chartData = {
 	values: [
@@ -21,6 +22,7 @@ const chartData = {
 	],
 };
 const App = (context) => {
+	const { config } = context;
 	const { getProductsGroupChart } = ChartManager;
 
 	return (
@@ -36,6 +38,7 @@ const App = (context) => {
 					data: getProductsGroupChart(context) } }
 			/>
 			<HeatMap { ...context }/>
+			<TextChart { ...{ ...context, data: config.text } }/>
 		</div>);
 };
 
