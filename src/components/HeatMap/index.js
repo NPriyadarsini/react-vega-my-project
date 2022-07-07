@@ -12,6 +12,10 @@ const HeatMap = ({ config: { heatMapProps: { type, width, height }}}) => {
 				{ field: 'Production Budget', valid: true },
 			] },
 		}],
+		params: [
+			{ name: 'pointer',
+				select: { type: 'point', on: 'mouseover' }},
+		],
 		mark: type,
 		width: width,
 		height: height,
@@ -28,9 +32,12 @@ const HeatMap = ({ config: { heatMapProps: { type, width, height }}}) => {
 				axis: { format: 's' },
 			},
 			color: {
-				aggregate: 'count',
-				type: 'quantitative',
-				legend: { gradientLength: height },
+				condition: {
+					param: 'pointer',
+					aggregate: 'count',
+					legend: { gradientLength: 400 },
+				},
+				value: 'grey',
 			},
 			size: { value: 100 },
 		},
