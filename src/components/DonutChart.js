@@ -18,8 +18,9 @@ const DonutChart = ({ config: { chartProps: { width, autosize }}, data }) => {
 		},
 		data: { name: 'values' },
 	};
+	const actions = false;
 
-	return <VegaLite { ...{ spec, data } }/>;
+	return <VegaLite { ...{ spec, data, actions } }/>;
 };
 
 export default DonutChart;

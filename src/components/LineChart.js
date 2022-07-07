@@ -17,8 +17,9 @@ const LineChart = ({ config: { chartProps: { width, autosize }}}) => {
 			y: { field: 'price', type: 'quantitative' },
 		},
 	};
+	const actions = false;
 
-	return <VegaLite { ...{ spec } }/>;
+	return <VegaLite { ...{ spec, actions } }/>;
 };
 
 export default LineChart;
