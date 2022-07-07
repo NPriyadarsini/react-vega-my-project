@@ -13,8 +13,9 @@ const HeatMap = ({ config: { heatMapProps: { type, width, height }}}) => {
 			] },
 		}],
 		params: [
-			{ name: 'pointer',
-				select: { type: 'point', on: 'mouseover' }},
+			{ name: 'zoom',
+				select: 'interval',
+				bind: 'scales' },
 		],
 		mark: type,
 		width: width,
@@ -32,12 +33,8 @@ const HeatMap = ({ config: { heatMapProps: { type, width, height }}}) => {
 				axis: { format: 's' },
 			},
 			color: {
-				condition: {
-					param: 'pointer',
-					aggregate: 'count',
-					legend: { gradientLength: 400 },
-				},
-				value: 'grey',
+				aggregate: 'count',
+				legend: { gradientLength: 400 },
 			},
 			size: { value: 100 },
 		},
