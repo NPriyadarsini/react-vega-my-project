@@ -10,6 +10,7 @@ import HistogramScatterPlot from './components/HistogramScatterPlot';
 import HeatMapWeather from './components/HeatMapWeather';
 import HeatMap from './components/HeatMap';
 import TextChart from './components/TextChart';
+import PointAndBar from './components/MultiView/PointAndBar';
 
 const chartData = {
 	values: [
@@ -39,6 +40,7 @@ const App = (context) => {
 			/>
 			<HeatMap { ...context }/>
 			<TextChart { ...{ ...context, data: config.text } }/>
+			<PointAndBar { ...context }/>
 		</div>);
 };
 
