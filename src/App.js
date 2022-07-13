@@ -13,6 +13,7 @@ import HeatMap from './components/HeatMap';
 import TextChart from './components/TextChart';
 import PointAndBar from './components/MultiView/PointAndBar';
 import BoxPlot from './components/boxPlot';
+import PyramidChart from './components/pyramidChart';
 
 const chartData = {
 	values: [
@@ -44,6 +45,7 @@ const App = (context) => {
 			<TextChart { ...{ ...context, data: config.text } }/>
 			<PointAndBar { ...context }/>
 			<BoxPlot { ...context }/>
+			<PyramidChart { ...context }/>
 		</div>);
 };
 
