@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import React from 'react';
 import BarChart from './components/BarChart';
 import PieChart from './components/PieChart';
@@ -11,6 +12,7 @@ import HeatMapWeather from './components/HeatMapWeather';
 import HeatMap from './components/HeatMap';
 import TextChart from './components/TextChart';
 import PointAndBar from './components/MultiView/PointAndBar';
+import BoxPlot from './components/boxPlot';
 
 const chartData = {
 	values: [
@@ -41,6 +43,7 @@ const App = (context) => {
 			<HeatMap { ...context }/>
 			<TextChart { ...{ ...context, data: config.text } }/>
 			<PointAndBar { ...context }/>
+			<BoxPlot { ...context }/>
 		</div>);
 };
 
