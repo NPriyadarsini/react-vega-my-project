@@ -39,6 +39,22 @@ const props = () => ({
 			},
 		},
 		{
+			view: { stroke: null },
+			mark: {
+				type: 'text',
+				align: 'center',
+			},
+			encoding: {
+				y: {
+					field: 'age',
+					type: 'ordinal',
+					axis: null,
+					sort: 'descending',
+				},
+				text: { field: 'age', type: 'quantitative' },
+			},
+		},
+		{
 			title: 'Female',
 			transform: [
 				{
@@ -57,7 +73,7 @@ const props = () => ({
 					field: 'age',
 					sort: 'descending',
 					title: null,
-					axis: { ticks: false, labelPadding: 10 },
+					axis: null,
 				},
 				color: {
 					field: 'gender',
