@@ -14,6 +14,7 @@ import TextChart from './components/TextChart';
 import PointAndBar from './components/MultiView/PointAndBar';
 import BoxPlot from './components/boxPlot';
 import PyramidChart from './components/pyramidChart';
+import PopulationPlot from './components/populationPlot';
 
 const chartData = {
 	values: [
@@ -46,6 +47,7 @@ const App = (context) => {
 			<PointAndBar { ...context }/>
 			<BoxPlot { ...context }/>
 			<PyramidChart { ...context }/>
+			<PopulationPlot { ...context }/>
 		</div>);
 };
 
