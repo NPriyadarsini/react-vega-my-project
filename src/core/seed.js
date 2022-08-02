@@ -1,3 +1,5 @@
-const seed = {};
+const seed = {
+	value: '',
+};
 
 export default seed;
