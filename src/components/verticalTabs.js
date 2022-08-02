@@ -9,26 +9,23 @@ const VerticalTabs = (context) => {
 	const { state, patchState } = context;
 
 	return (
-		<Box sx={ { flexGrow: 1, display: 'flex' } }>
+		<Box sx={ { flexGrow: 1, display: 'flex', height: '90vMin' } }>
 			<TabContext value={ state.value }>
-				<Box sx={ { borderRight: 1, borderColor: 'divider',
-					height: '100vMin' } }
+				<TabList
+					orientation="vertical"
+					variant="scrollable"
+					onChange={ (dummy, value) => patchState({ value }) }
+					sx={ { borderRight: 1, borderColor: 'divider' } }
 				>
-					<TabList
-						orientation="vertical"
-						variant="scrollable"
-						onChange={ (dummy, value) => patchState({ value }) }
-					>
-						{ examples(context).map(({ path, label }) =>
-							<Tab
-								key={ path }
-								label={ label }
-								value={ path }
-								to={ `/${ path }` }
-								component={ Link }
-							/>)}
-					</TabList>
-				</Box>
+					{ examples(context).map(({ path, label }) =>
+						<Tab
+							key={ path }
+							label={ label }
+							value={ path }
+							to={ `/${ path }` }
+							component={ Link }
+						/>)}
+				</TabList>
 				{ examples(context)
 					.map(({ path, component: Component, data }) =>
 						<TabPanel key={ path } value={ path }>
