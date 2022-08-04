@@ -12,6 +12,7 @@ import PointAndBar from './MultiView/PointAndBar';
 import BoxPlot from './boxPlot';
 import PyramidChart from './pyramidChart';
 import PopulationPlot from './populationPlot';
+import MosaicChart from './mosaicChart';
 import ChartManager from '../service/chartManager';
 
 const examples = (context) => {
@@ -88,6 +89,11 @@ const examples = (context) => {
 			path: 'populationPlot',
 			component: PopulationPlot,
 			label: 'PopulationPlot',
+		},
+		{
+			path: 'mosaicChart',
+			component: MosaicChart,
+			label: 'MosaicChart',
 		},
 	];
 };
