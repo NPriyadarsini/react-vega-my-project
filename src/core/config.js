@@ -56,6 +56,12 @@ const config = {
 		{ xField: 25, yField: 65, label: 'Brian' },
 		{ xField: 70, yField: 43, label: 'Charlie' },
 	],
+
+	windVectorProps: {
+		width: 450,
+		height: 450,
+		shape: 'arrow',
+	},
 };
 
 export default config;

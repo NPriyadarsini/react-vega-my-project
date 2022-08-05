@@ -13,6 +13,7 @@ import BoxPlot from './boxPlot';
 import PyramidChart from './pyramidChart';
 import PopulationPlot from './populationPlot';
 import MosaicChart from './mosaicChart';
+import WindVectorChart from './windVectorChart';
 import ChartManager from '../service/chartManager';
 
 const examples = (context) => {
@@ -94,6 +95,11 @@ const examples = (context) => {
 			path: 'mosaicChart',
 			component: MosaicChart,
 			label: 'MosaicChart',
+		},
+		{
+			path: 'windVectorChart',
+			component: WindVectorChart,
+			label: 'WindVectorChart',
 		},
 	];
 };
