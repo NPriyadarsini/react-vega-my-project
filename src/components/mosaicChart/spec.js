@@ -45,7 +45,7 @@ const getSpec = () => ({
 					as: 'x2',
 				},
 				{
-					op: 'denseRank',
+					op: 'dense_rank',
 					as: 'rankCylinders',
 				},
 				{
@@ -71,7 +71,7 @@ const getSpec = () => ({
 		{
 			window: [
 				{
-					op: 'denseRank',
+					op: 'dense_rank',
 					as: 'rankOrigin',
 				},
 			],
