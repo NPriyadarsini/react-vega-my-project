@@ -14,6 +14,7 @@ import PyramidChart from './pyramidChart';
 import PopulationPlot from './populationPlot';
 import MosaicChart from './mosaicChart';
 import WindVectorChart from './windVectorChart';
+import VegaTreeMap from './vegaExample/treeMap';
 import ChartManager from '../service/chartManager';
 
 const examples = (context) => {
@@ -100,6 +101,11 @@ const examples = (context) => {
 			path: 'windVectorChart',
 			component: WindVectorChart,
 			label: 'WindVectorChart',
+		},
+		{
+			path: 'vegaTreeMap',
+			component: VegaTreeMap,
+			label: 'vegaTreeMap',
 		},
 	];
 };
