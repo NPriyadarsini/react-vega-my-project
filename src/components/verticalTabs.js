@@ -9,11 +9,12 @@ const VerticalTabs = (context) => {
 	const { state, patchState } = context;
 
 	return (
-		<Box sx={ { flexGrow: 1, display: 'flex', height: '90vMin' } }>
+		<Box sx={ { flexGrow: 1, display: 'flex', height: '100vMin' } }>
 			<TabContext value={ state.value }>
 				<TabList
 					orientation="vertical"
 					variant="scrollable"
+					scrollButtons={ false }
 					onChange={ (dummy, value) => patchState({ value }) }
 					sx={ { borderRight: 1, borderColor: 'divider' } }
 				>
